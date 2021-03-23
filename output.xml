@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0 (Python 3.8.5 on linux)" generated="20210323 19:08:04.324" rpa="false" schemaversion="2">
+<suite id="s1" name="Tests" source="/home/ville/Desktop/robot-framework/Tests">
+<suite id="s1-s1" name="Login" source="/home/ville/Desktop/robot-framework/Tests/login.robot">
+<test id="s1-s1-t1" name="Goto login page">
+<kw name="Open-homepage" library="resource" type="SETUP">
+<kw name="New Page" library="Browser">
+<arg>${HOME_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page. A Page is the Playwright equivalent to a tab.
+See `Browser, Context and Page` for more information about Page concept.
+Returns a stable identifier for the created page.</doc>
+<msg timestamp="20210323 19:08:05.726" level="INFO">Successfully initialized new page object and opened url: https://vm3212.kaj.pouta.csc.fi/</msg>
+<status status="PASS" starttime="20210323 19:08:04.631" endtime="20210323 19:08:05.726"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>a.navbar-brand</arg>
+<arg>==</arg>
+<arg>conduit</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.
+See the `Finding elements` section for details about the selectors.</doc>
+<status status="PASS" starttime="20210323 19:08:05.727" endtime="20210323 19:08:05.793"/>
+</kw>
+<status status="PASS" starttime="20210323 19:08:04.631" endtime="20210323 19:08:05.794"/>
+</kw>
+<kw name="Goto-login-page" library="resource">
+<kw name="Go To" library="Browser">
+<arg>${LOGIN_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<msg timestamp="20210323 19:08:05.922" level="INFO">Succesfully opened URL https://vm3212.kaj.pouta.csc.fi/login</msg>
+<status status="PASS" starttime="20210323 19:08:05.794" endtime="20210323 19:08:05.923"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>button.btn-primary</arg>
+<arg>==</arg>
+<arg>Sign in</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.
+See the `Finding elements` section for details about the selectors.</doc>
+<status status="PASS" starttime="20210323 19:08:05.923" endtime="20210323 19:08:05.943"/>
+</kw>
+<status status="PASS" starttime="20210323 19:08:05.794" endtime="20210323 19:08:05.943"/>
+</kw>
+<status status="PASS" starttime="20210323 19:08:04.628" endtime="20210323 19:08:05.943"/>
+</test>
+<test id="s1-s1-t2" name="Blank email">
+<kw name="Open-homepage" library="resource" type="SETUP">
+<kw name="New Page" library="Browser">
+<arg>${HOME_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page. A Page is the Playwright equivalent to a tab.
+See `Browser, Context and Page` for more information about Page concept.
+Returns a stable identifier for the created page.</doc>
+<msg timestamp="20210323 19:08:06.817" level="INFO">Successfully initialized new page object and opened url: https://vm3212.kaj.pouta.csc.fi/</msg>
+<status status="PASS" starttime="20210323 19:08:05.969" endtime="20210323 19:08:06.817"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>a.navbar-brand</arg>
+<arg>==</arg>
+<arg>conduit</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.
+See the `Finding elements` section for details about the selectors.</doc>
+<status status="PASS" starttime="20210323 19:08:06.817" endtime="20210323 19:08:06.837"/>
+</kw>
+<status status="PASS" starttime="20210323 19:08:05.968" endtime="20210323 19:08:06.837"/>
+</kw>
+<kw name="Goto-login-page" library="resource">
+<kw name="Go To" library="Browser">
+<arg>${LOGIN_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<msg timestamp="20210323 19:08:06.910" level="INFO">Succesfully opened URL https://vm3212.kaj.pouta.csc.fi/login</msg>
+<status status="PASS" starttime="20210323 19:08:06.838" endtime="20210323 19:08:06.910"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>button.btn-primary</arg>
+<arg>==</arg>
+<arg>Sign in</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.
+See the `Finding elements` section for details about the selectors.</doc>
+<status status="PASS" starttime="20210323 19:08:06.910" endtime="20210323 19:08:06.927"/>
+</kw>
+<status status="PASS" starttime="20210323 19:08:06.838" endtime="20210323 19:08:06.927"/>
+</kw>
+<kw name="Input-password" library="resource">
+<arg>${valid-password}</arg>
+<kw name="Type Text" library="Browser">
+<arg>css=[placeholder="Password"]</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210323 19:08:06.928" level="INFO">Types the text 'testi' in the given field.</msg>
+<status status="PASS" starttime="20210323 19:08:06.928" endtime="20210323 19:08:06.951"/>
+</kw>
+<status status="PASS" starttime="20210323 19:08:06.928" endtime="20210323 19:08:06.952"/>
+</kw>
+<kw name="Submit-login" library="resource">
+<kw name="Click" library="Browser">
+<arg>css=[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20210323 19:08:06.952" endtime="20210323 19:08:07.000"/>
+</kw>
+<status status="PASS" starttime="20210323 19:08:06.952" endtime="20210323 19:08:07.001"/>
+</kw>
+<kw name="Invalid-blank-email" library="resource">
+<kw name="Get Text" library="Browser">
+<arg>css=[class="error-messages"]</arg>
+<arg>*=</arg>
+<arg>email</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.
+See the `Finding elements` section for details about the selectors.</doc>
+<status status="PASS" starttime="20210323 19:08:07.001" endtime="20210323 19:08:07.071"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>css=[class="error-messages"]</arg>
+<arg>*=</arg>
+<arg>blank</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.
+See the `Finding elements` section for details about the selectors.</doc>
+<status status="PASS" starttime="20210323 19:08:07.071" endtime="20210323 19:08:07.079"/>
+</kw>
+<status status="PASS" starttime="20210323 19:08:07.001" endtime="20210323 19:08:07.079"/>
+</kw>
+<status status="PASS" starttime="20210323 19:08:05.966" endtime="20210323 19:08:07.080"/>
+</test>
+<test id="s1-s1-t3" name="Blank password">
+<kw name="Open-homepage" library="resource" type="SETUP">
+<kw name="New Page" library="Browser">
+<arg>${HOME_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page. A Page is the Playwright equivalent to a tab.
+See `Browser, Context and Page` for more information about Page concept.
+Returns a stable identifier for the created page.</doc>
+<msg timestamp="20210323 19:08:08.021" level="INFO">Successfully initialized new page object and opened url: https://vm3212.kaj.pouta.csc.fi/</msg>
+<status status="PASS" starttime="20210323 19:08:07.107" endtime="20210323 19:08:08.022"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>a.navbar-brand</arg>
+<arg>==</arg>
+<arg>conduit</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.
+See the `Finding elements` section for details about the selectors.</doc>
+<status status="PASS" starttime="20210323 19:08:08.022" endtime="20210323 19:08:08.115"/>
+</kw>
+<status status="PASS" starttime="20210323 19:08:07.107" endtime="20210323 19:08:08.115"/>
+</kw>
+<kw name="Goto-login-page" library="resource">
+<kw name="Go To" library="Browser">
+<arg>${LOGIN_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<msg timestamp="20210323 19:08:08.263" level="INFO">Succesfully opened URL https://vm3212.kaj.pouta.csc.fi/login</msg>
+<status status="PASS" starttime="20210323 19:08:08.116" endtime="20210323 19:08:08.263"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>button.btn-primary</arg>
+<arg>==</arg>
+<arg>Sign in</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.
+See the `Finding elements` section for details about the selectors.</doc>
+<status status="PASS" starttime="20210323 19:08:08.264" endtime="20210323 19:08:08.282"/>
+</kw>
+<status status="PASS" starttime="20210323 19:08:08.115" endtime="20210323 19:08:08.282"/>
+</kw>
+<kw name="Input-email" library="resource">
+<arg>${valid-email}</arg>
+<kw name="Type Text" library="Browser">
+<arg>css=[placeholder="Email"]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210323 19:08:08.282" level="INFO">Types the text 'testi1@testi.fi' in the given field.</msg>
+<status status="PASS" starttime="20210323 19:08:08.282" endtime="20210323 19:08:08.315"/>
+</kw>
+<status status="PASS" starttime="20210323 19:08:08.282" endtime="20210323 19:08:08.315"/>
+</kw>
+<kw name="Submit-login" library="resource">
+<kw name="Click" library="Browser">
+<arg>css=[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20210323 19:08:08.315" endtime="20210323 19:08:08.349"/>
+</kw>
+<status status="PASS" starttime="20210323 19:08:08.315" endtime="20210323 19:08:08.349"/>
+</kw>
+<kw name="Invalid-blank-password" library="resource">
+<kw name="Get Text" library="Browser">
+<arg>css=[class="error-messages"]</arg>
+<arg>*=</arg>
+<arg>password</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.
+See the `Finding elements` section for details about the selectors.</doc>
+<status status="PASS" starttime="20210323 19:08:08.350" endtime="20210323 19:08:08.454"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>css=[class="error-messages"]</arg>
+<arg>*=</arg>
+<arg>blank</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.
+See the `Finding elements` section for details about the selectors.</doc>
+<status status="PASS" starttime="20210323 19:08:08.455" endtime="20210323 19:08:08.500"/>
+</kw>
+<status status="PASS" starttime="20210323 19:08:08.350" endtime="20210323 19:08:08.501"/>
+</kw>
+<status status="PASS" starttime="20210323 19:08:07.099" endtime="20210323 19:08:08.502"/>
+</test>
+<test id="s1-s1-t4" name="Invalid email or password">
+<kw name="Open-homepage" library="resource" type="SETUP">
+<kw name="New Page" library="Browser">
+<arg>${HOME_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page. A Page is the Playwright equivalent to a tab.
+See `Browser, Context and Page` for more information about Page concept.
+Returns a stable identifier for the created page.</doc>
+<msg timestamp="20210323 19:08:09.463" level="INFO">Successfully initialized new page object and opened url: https://vm3212.kaj.pouta.csc.fi/</msg>
+<status status="PASS" starttime="20210323 19:08:08.567" endtime="20210323 19:08:09.463"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>a.navbar-brand</arg>
+<arg>==</arg>
+<arg>conduit</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.
+See the `Finding elements` section for details about the selectors.</doc>
+<status status="PASS" starttime="20210323 19:08:09.464" endtime="20210323 19:08:09.524"/>
+</kw>
+<status status="PASS" starttime="20210323 19:08:08.566" endtime="20210323 19:08:09.525"/>
+</kw>
+<kw name="Goto-login-page" library="resource">
+<kw name="Go To" library="Browser">
+<arg>${LOGIN_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<msg timestamp="20210323 19:08:09.646" level="INFO">Succesfully opened URL https://vm3212.kaj.pouta.csc.fi/login</msg>
+<status status="PASS" starttime="20210323 19:08:09.525" endtime="20210323 19:08:09.647"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>button.btn-primary</arg>
+<arg>==</arg>
+<arg>Sign in</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.
+See the `Finding elements` section for details about the selectors.</doc>
+<status status="PASS" starttime="20210323 19:08:09.647" endtime="20210323 19:08:09.665"/>
+</kw>
+<status status="PASS" starttime="20210323 19:08:09.525" endtime="20210323 19:08:09.665"/>
+</kw>
+<kw name="Input-email" library="resource">
+<arg>${invalid-email}</arg>
+<kw name="Type Text" library="Browser">
+<arg>css=[placeholder="Email"]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210323 19:08:09.666" level="INFO">Types the text 'aasdfe@asdfase.fi' in the given field.</msg>
+<status status="PASS" starttime="20210323 19:08:09.666" endtime="20210323 19:08:09.699"/>
+</kw>
+<status status="PASS" starttime="20210323 19:08:09.666" endtime="20210323 19:08:09.699"/>
+</kw>
+<kw name="Input-password" library="resource">
+<arg>${invalid-password}</arg>
+<kw name="Type Text" library="Browser">
+<arg>css=[placeholder="Password"]</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210323 19:08:09.700" level="INFO">Types the text 'itset' in the given field.</msg>
+<status status="PASS" starttime="20210323 19:08:09.700" endtime="20210323 19:08:09.716"/>
+</kw>
+<status status="PASS" starttime="20210323 19:08:09.700" endtime="20210323 19:08:09.717"/>
+</kw>
+<kw name="Submit-login" library="resource">
+<kw name="Click" library="Browser">
+<arg>css=[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20210323 19:08:09.717" endtime="20210323 19:08:09.749"/>
+</kw>
+<status status="PASS" starttime="20210323 19:08:09.717" endtime="20210323 19:08:09.750"/>
+</kw>
+<kw name="Invalid-email-or-password" library="resource">
+<kw name="Get Text" library="Browser">
+<arg>css=[class="error-messages"]</arg>
+<arg>*=</arg>
+<arg>invalid</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.
+See the `Finding elements` section for details about the selectors.</doc>
+<status status="PASS" starttime="20210323 19:08:09.750" endtime="20210323 19:08:09.846"/>
+</kw>
+<status status="PASS" starttime="20210323 19:08:09.750" endtime="20210323 19:08:09.846"/>
+</kw>
+<status status="PASS" starttime="20210323 19:08:08.563" endtime="20210323 19:08:09.847"/>
+</test>
+<test id="s1-s1-t5" name="Succesfull login">
+<kw name="Open-homepage" library="resource" type="SETUP">
+<kw name="New Page" library="Browser">
+<arg>${HOME_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page. A Page is the Playwright equivalent to a tab.
+See `Browser, Context and Page` for more information about Page concept.
+Returns a stable identifier for the created page.</doc>
+<msg timestamp="20210323 19:08:10.863" level="INFO">Successfully initialized new page object and opened url: https://vm3212.kaj.pouta.csc.fi/</msg>
+<status status="PASS" starttime="20210323 19:08:09.934" endtime="20210323 19:08:10.864"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>a.navbar-brand</arg>
+<arg>==</arg>
+<arg>conduit</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.
+See the `Finding elements` section for details about the selectors.</doc>
+<status status="PASS" starttime="20210323 19:08:10.864" endtime="20210323 19:08:10.884"/>
+</kw>
+<status status="PASS" starttime="20210323 19:08:09.933" endtime="20210323 19:08:10.884"/>
+</kw>
+<kw name="Goto-login-page" library="resource">
+<kw name="Go To" library="Browser">
+<arg>${LOGIN_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<msg timestamp="20210323 19:08:10.958" level="INFO">Succesfully opened URL https://vm3212.kaj.pouta.csc.fi/login</msg>
+<status status="PASS" starttime="20210323 19:08:10.884" endtime="20210323 19:08:10.958"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>button.btn-primary</arg>
+<arg>==</arg>
+<arg>Sign in</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.
+See the `Finding elements` section for details about the selectors.</doc>
+<status status="PASS" starttime="20210323 19:08:10.958" endtime="20210323 19:08:10.975"/>
+</kw>
+<status status="PASS" starttime="20210323 19:08:10.884" endtime="20210323 19:08:10.975"/>
+</kw>
+<kw name="Input-email" library="resource">
+<arg>${valid-email}</arg>
+<kw name="Type Text" library="Browser">
+<arg>css=[placeholder="Email"]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210323 19:08:10.975" level="INFO">Types the text 'testi1@testi.fi' in the given field.</msg>
+<status status="PASS" starttime="20210323 19:08:10.975" endtime="20210323 19:08:11.009"/>
+</kw>
+<status status="PASS" starttime="20210323 19:08:10.975" endtime="20210323 19:08:11.009"/>
+</kw>
+<kw name="Input-password" library="resource">
+<arg>${valid-password}</arg>
+<kw name="Type Text" library="Browser">
+<arg>css=[placeholder="Password"]</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20210323 19:08:11.009" level="INFO">Types the text 'testi' in the given field.</msg>
+<status status="PASS" starttime="20210323 19:08:11.009" endtime="20210323 19:08:11.025"/>
+</kw>
+<status status="PASS" starttime="20210323 19:08:11.009" endtime="20210323 19:08:11.025"/>
+</kw>
+<kw name="Submit-login" library="resource">
+<kw name="Click" library="Browser">
+<arg>css=[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20210323 19:08:11.025" endtime="20210323 19:08:11.065"/>
+</kw>
+<status status="PASS" starttime="20210323 19:08:11.025" endtime="20210323 19:08:11.065"/>
+</kw>
+<kw name="Valid-login" library="resource">
+<arg>${valid-username}</arg>
+<kw name="Get Text" library="Browser">
+<arg>css=[href="/@${username}"]</arg>
+<arg>==</arg>
+<arg>${username}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.
+See the `Finding elements` section for details about the selectors.</doc>
+<status status="PASS" starttime="20210323 19:08:11.066" endtime="20210323 19:08:11.222"/>
+</kw>
+<status status="PASS" starttime="20210323 19:08:11.065" endtime="20210323 19:08:11.222"/>
+</kw>
+<status status="PASS" starttime="20210323 19:08:09.923" endtime="20210323 19:08:11.223"/>
+</test>
+<test id="s1-s1-t6" name="Logout">
+<kw name="Open-homepage" library="resource" type="SETUP">
+<kw name="New Page" library="Browser">
+<arg>${HOME_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page. A Page is the Playwright equivalent to a tab.
+See `Browser, Context and Page` for more information about Page concept.
+Returns a stable identifier for the created page.</doc>
+<msg timestamp="20210323 19:08:12.209" level="INFO">Successfully initialized new page object and opened url: https://vm3212.kaj.pouta.csc.fi/</msg>
+<status status="PASS" starttime="20210323 19:08:11.242" endtime="20210323 19:08:12.210"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>a.navbar-brand</arg>
+<arg>==</arg>
+<arg>conduit</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.
+See the `Finding elements` section for details about the selectors.</doc>
+<status status="PASS" starttime="20210323 19:08:12.210" endtime="20210323 19:08:12.309"/>
+</kw>
+<status status="PASS" starttime="20210323 19:08:11.242" endtime="20210323 19:08:12.309"/>
+</kw>
+<kw name="Succesfull_login">
+<msg timestamp="20210323 19:08:12.318" level="FAIL">No keyword with name 'Succesfull_login' found.</msg>
+<status status="FAIL" starttime="20210323 19:08:12.318" endtime="20210323 19:08:12.318"/>
+</kw>
+<status status="FAIL" starttime="20210323 19:08:11.239" endtime="20210323 19:08:12.319">No keyword with name 'Succesfull_login' found.</status>
+</test>
+<status status="FAIL" starttime="20210323 19:08:04.338" endtime="20210323 19:08:12.364"/>
+</suite>
+<status status="FAIL" starttime="20210323 19:08:04.325" endtime="20210323 19:08:12.369"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="1" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="5" fail="1" skip="0" id="s1-s1" name="Login">Tests.Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
