@@ -1,0 +1,6 @@
+{"level":30,"time":"2021-03-23T18:20:21.702Z","pid":147762,"hostname":"ville-MS-7B98","msg":"Listening on 60083"}
+{"level":30,"time":"2021-03-23T18:20:21.954Z","pid":147762,"hostname":"ville-MS-7B98","msg":"Changed active context"}
+{"level":30,"time":"2021-03-23T18:20:22.034Z","pid":147762,"hostname":"ville-MS-7B98","msg":"Video path: undefined"}
+{"level":30,"time":"2021-03-23T18:20:22.034Z","pid":147762,"hostname":"ville-MS-7B98","msg":"Changed active page"}
+{"level":30,"time":"2021-03-23T18:20:22.938Z","pid":147762,"hostname":"ville-MS-7B98","msg":"Retrieved text for element a.navbar-brand containing conduit"}
+{"level":30,"time":"2021-03-23T18:20:23.089Z","pid":147762,"hostname":"ville-MS-7B98","msg":"Retrieved text for element button.btn-primary containing Sign in"}
